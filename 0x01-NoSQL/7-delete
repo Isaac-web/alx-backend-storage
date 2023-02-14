@@ -1,0 +1,3 @@
+//delete matching instances from the school database
+
+db.school.remove({"name": "Holberton school"})
