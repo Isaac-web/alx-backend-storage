@@ -6,7 +6,10 @@ Updates a document in a collection
 
 def update_topics(mongo_collection, name, topics):
     """
-    Updates a document in the mongo_collection
+    update many documents that match the
+    name provided
     """
-    mongo_collection.update_many(
-        {"name": "name"}, {"$set": {"topics": topics}}, {"multi": True})
+    return mongo_collection.update_many(
+        {"name": name},
+        {"$set": {"topics": topics}}
+    )
