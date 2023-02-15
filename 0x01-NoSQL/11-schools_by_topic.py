@@ -8,4 +8,4 @@ def schools_by_topic(mongo_collection, topic):
     """
     Returns a document that has the topic provided
     """
-    return list(mongo_collection.find({"$in": {"topics": topic}}))
+    return list(mongo_collection.find({"topics": topic}))
